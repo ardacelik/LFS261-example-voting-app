@@ -14,7 +14,7 @@ pipeline {
                 }
             }
         }
-
+        
         stage("test") {
             steps {
                 echo "Running Unit Tests on worker app"
@@ -22,7 +22,9 @@ pipeline {
         }
 
         stage("package") {
-            echo "Packaging worker app"
+            steps {
+                echo "Packaging worker app"
+            }
         }
     }
 
